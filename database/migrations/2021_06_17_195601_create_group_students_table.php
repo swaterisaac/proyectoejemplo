@@ -15,10 +15,10 @@ class CreateGroupStudentsTable extends Migration
     {
         Schema::create('group_students', function (Blueprint $table) {
             $table->id();
-            $table->boolean('es_lider');
+            $table->boolean('is_leader');
 
-            $table->unsignedBigInteger('id_grupo')->nullable();
-            $table->foreign('id_grupo')->references('id')->on('groups');
+            $table->unsignedBigInteger('id_group')->nullable();
+            $table->foreign('id_group')->references('id')->on('groups');
       
             $table->unsignedBigInteger('id_student')->nullable();
             $table->foreign('id_student')->references('id')->on('students');

@@ -23,9 +23,9 @@ class EnrollmentFactory extends Factory
     public function definition()
     {
         return [
-            'nivel' => $this->faker->numberBetween($min = 1, $max = 12),
-            'fecha' => $this->faker->date(),
-            'id_estudiante' => Student::all()->random()->id
+            'level' => $this->faker->unique()->numberBetween($min = 1, $max = 12),
+            'date' => $this->faker->date(),
+            'id_student' => Student::all()->random()->id
         ];
     }
 }

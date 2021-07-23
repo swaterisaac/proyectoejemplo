@@ -15,11 +15,11 @@ class CreateEnrollmentsTable extends Migration
     {
         Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
-            $table->integer('nivel');
-            $table->date('fecha');
+            $table->integer('level')->unique();
+            $table->date('date');
 
-            $table->unsignedBigInteger('id_estudiante')->nullable();
-            $table->foreign('id_estudiante')->references('id')->on('students');
+            $table->unsignedBigInteger('id_student')->nullable();
+            $table->foreign('id_student')->references('id')->on('students');
 
             $table->timestamps();
         });

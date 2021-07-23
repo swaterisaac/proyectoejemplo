@@ -22,9 +22,9 @@ class StudentFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->name,
+            'name' => $this->faker->name,
             'rut' => $this->faker->numberBetween($min = 10000000, $max = 230000000),
-            'fecha_de_nac' => $this->faker->date()
+            'birthday' => $this->faker->date()
         ];
     }
 }

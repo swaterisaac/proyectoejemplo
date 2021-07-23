@@ -22,7 +22,7 @@ class SubjectFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->name,
+            'name' => $this->faker->randomElement($array = array ('Cálculo 1','Cálculo 2','Cálculo 3','Diseño de bases de datos', 'Taller de desarrollo personal')),
         ];
     }
 }

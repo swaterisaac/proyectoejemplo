@@ -13,8 +13,8 @@ class CourseFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->name,
-            'id_asignatura' => Subject::all()->random()->id
+            'name' => $this->faker->unique()->randomElement($array = array ('A1','A2','A3','B1','B2','B3')),
+            'id_subject' => Subject::all()->random()->id
         ];
     }
 }

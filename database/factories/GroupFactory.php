@@ -23,8 +23,8 @@ class GroupFactory extends Factory
     public function definition()
     {
         return [
-            'nombre' => $this->faker->name,
-            'id_curso' => Course::all()->random()->id
+            'name' => $this->faker->randomElement($array = array ('Grupo 1','Grupo 2','Grupo 3','Grupo 4', 'Grupo 5','Grupo 6','Grupo 7','Grupo 8','Grupo 9')),
+            'id_course' => Course::all()->random()->id
         ];
     }
 }

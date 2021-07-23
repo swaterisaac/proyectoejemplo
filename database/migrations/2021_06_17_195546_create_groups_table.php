@@ -15,10 +15,10 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre',100);
+            $table->string('name',100);
 
-            $table->unsignedBigInteger('id_curso')->nullable();
-            $table->foreign('id_curso')->references('id')->on('courses');
+            $table->unsignedBigInteger('id_course')->nullable();
+            $table->foreign('id_course')->references('id')->on('courses');
             
             $table->timestamps();
         });

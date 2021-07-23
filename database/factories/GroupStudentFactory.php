@@ -24,8 +24,8 @@ class GroupStudentFactory extends Factory
     public function definition()
     {
         return [
-            'es_lider' => $this->faker->boolean(),
-            'id_grupo' => Group::all()->random()->id,
+            'is_leader' => $this->faker->boolean(),
+            'id_group' => Group::all()->random()->id,
             'id_student' => Student::all()->random()->id,
         ];
     }

@@ -15,10 +15,10 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre',100);
+            $table->string('name',100)->unique();
 
-            $table->unsignedBigInteger('id_asignatura')->nullable();
-            $table->foreign('id_asignatura')->references('id')->on('subjects');
+            $table->unsignedBigInteger('id_subject')->nullable();
+            $table->foreign('id_subject')->references('id')->on('subjects');
 
             $table->timestamps();
         });
